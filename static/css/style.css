@@ -1,0 +1,39 @@
+/*.row * {
+	min-height: 50px;
+	border: 1px solid #0088cc;
+	background: #eee;
+}*/
+
+body {
+    background-color: #D0EAF2;
+    background: radial-gradient(ellipse, #A099C2, #E4E895);
+    text-align: bottom;
+    font-family: Tahoma;
+}
+
+.page-wrapper {
+	min-height: 100%;
+	margin-top: 5%;
+}
+
+
+.address {
+	padding-left: 15%;
+	font-size: 1.5em;
+}
+
+.menu {
+	padding-left: 15%;
+	font-size: 1.5em;
+}
+
+.about-me {
+	padding-top: 5%;
+	font-size: 1.1em;
+}
+
+.title {
+    text-shadow: 1px 1px 2px black, 0 0 1em blue; /* Параметры тени */
+    color: white; /* Белый цвет текста */
+    font-size: 1.7em; /* Размер надписи */
+   }
