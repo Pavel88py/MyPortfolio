@@ -41,22 +41,23 @@
     <div class="page-wrapper col-lg-6 col-md-6 col-sm-6 col-xs-6 about-me">   
       <div class="row address">
         <address>
-          <strong>{{ companyName }}</strong><br>
-          795 Folsom Ave, Suite 600<br>
-          San Francisco, CA 94107<br>
-          <abbr title="Phone">P:</abbr> (123) 456-7890
+          <strong>{{ companyName }}</strong>
+          <br>
+          {{ companyAdress }}
+          <br>
+          <abbr title="Phone">Phone:</abbr> {{ phoneNumber }} 
         </address>
 
         <address>
-          <strong>Pavel Zilber</strong><br>
-          <a href="mailto:#">pavel.silber@example.com</a>
+          <strong>Pavel Silber</strong><br>
+          <a href="mailto:#">{{ email }}</a>
         </address>
       </div>
     </div>  
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <div class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6 about-me">
-  <img src="/static/img/adress.jpg" alt="adress" class="img-thumbnail">
+  <img src="/static/img/adress1.jpg" alt="adress" class="img-thumbnail">
 </div>
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->

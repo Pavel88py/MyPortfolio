@@ -49,12 +49,12 @@
 
 <dl class="dl-horizontal">
   <dt>Name:</dt>
-  <dd>{{ myName }}</dd>             <!-- Template-Content -->
+  <dd>{{ myName|title }}</dd>             <!-- Filter     |title -->
 </dl>
 
 <dl class="dl-horizontal">
   <dt>My birthday:</dt>
-  <dd>{{ myAge }}</dd>
+  <dd>{{ myAge|date:"d F o" }}</dd>
 </dl>
 
 <dl class="dl-horizontal">
@@ -72,8 +72,25 @@
   <dd>{{ myExperience }}</dd>
 </dl>
 
+<dl class="dl-horizontal">
+  <dt>Place of work:</dt>
+  <dd>{{ workPlace.0 }} {{ workPlace.1 }} {{ workPlace.2 }}</dd>
+</dl>
 
-</div>   
+<dl class="dl-horizontal">
+  <dt>Pets:</dt>
+  <dd>{% if pets %}
+        {% for pet in pets %}
+          {{ pet}}
+        {% endfor %}
+        {% else %}
+          Don't have yeat
+      {% endif %}
+
+  </dd>
+</dl>
+
+</div> 
 
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
