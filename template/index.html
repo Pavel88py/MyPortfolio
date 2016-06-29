@@ -36,40 +36,40 @@
 <hr>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-  <p class="title">Несколько слов о моем портфолио фрилансера web программиста сайтов</p>
+  <p class="title">Welcome to my portfolio page!</p>
 </div>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 about-me">
 
 <dl class="dl-horizontal">
-  <dt>Статус:</dt>
-  <dd>web-разработчик, фрилансер</dd>
+  <dt>My role:</dt>
+  <dd>{{ myRole }}</dd>
 </dl>
 
 <dl class="dl-horizontal">
-  <dt>Ф.И.О.:</dt>
-  <dd>{{ name }}</dd>
+  <dt>Name:</dt>
+  <dd>{{ myName }}</dd>             <!-- Template-Content -->
 </dl>
 
 <dl class="dl-horizontal">
-  <dt>Возраст:</dt>
-  <dd>17.08.1988</dd>
+  <dt>My birthday:</dt>
+  <dd>{{ myAge }}</dd>
 </dl>
 
 <dl class="dl-horizontal">
-  <dt>Языки:</dt>
-  <dd>Русский, Украинский, технический Английский</dd>
+  <dt>Languages:</dt>
+  <dd>{{ myLanguages }}</dd>
 </dl>
 
 <dl class="dl-horizontal">
-  <dt>Навыки:</dt>
-  <dd>HTML / CSS, Javascript / jQuery / AJAX, PHP / MySQL, Photoshop / Illustrator / Flash</dd>
+  <dt>Skills:</dt>
+  <dd>{{ mySkills }}</dd>
 </dl>
 
 <dl class="dl-horizontal">
-  <dt>Опыт работы:</dt>
-  <dd>Созданием сайтов, версткой и прочее занимаюсь с 2011 года по наст. время.</dd>
+  <dt>Experience:</dt>
+  <dd>{{ myExperience }}</dd>
 </dl>
 
 
@@ -88,6 +88,6 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
   </body>
 </html>
