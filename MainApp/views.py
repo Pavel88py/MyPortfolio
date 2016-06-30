@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from datetime import datetime, date, time
 
+
 companyName = 'Zorozex company'
 companyAdress = "795 Folsom Ave \nSuite 600 San Francisco \nCA 94107"
 phoneNumber = '(123) 456-7890'
