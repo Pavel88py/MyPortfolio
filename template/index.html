@@ -1,94 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to my page!</title>
-
-    <!-- Bootstrap -->
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
-    <link href="/static/css/style.css" rel="stylesheet">
-
-  </head>
-  <body>
+{% extends "base.html" %}
 
 
- <!-- ################################################################################## -->   
+{% block content %}
 
+<div class="container content"> 
 
-<div class="container">   
-  <div class="row menu">
-
-    <div class="nav nav-pills">
-        <li col-lg-4 col-md-4 col-sm-4 col-xs-4>
-            <a href="..">PORTFOLIO</a>
-        </li>
-        <li col-lg-4 col-md-4 col-sm-4 col-xs-4>
-            <a href="/work">MY WORKS</a>
-        </li>
-        <li col-lg-4 col-md-4 col-sm-4 col-xs-4>
-            <a href="/contact">CONTACTS</a>
-        </li>
-    </div> 
-  </div>
-
-<hr>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-  <p class="title">Welcome to my portfolio page!</p>
+
+
+<div class="w3-container w3-lobster font-effect-brick-sign col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <p class="w3-xxlarge title">Welcome to my awesome page!</p>
 </div>
-<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 about-me">
 
-<dl class="dl-horizontal">
-  <dt>My role:</dt>
-  <dd>{{ myRole }}</dd>
-</dl>
+  <dl class="dl-horizontal">
+    <dt>My role:</dt>
+    <dd>{{ myRole }}</dd>
+  </dl>
 
-<dl class="dl-horizontal">
-  <dt>Name:</dt>
-  <dd>{{ myName|title }}</dd>             <!-- Filter     |title -->
-</dl>
+  <dl class="dl-horizontal">
+    <dt>Name:</dt>
+    <dd>{{ myName|title }}</dd>             <!-- Filter     |title -->
+  </dl>
 
-<dl class="dl-horizontal">
-  <dt>My birthday:</dt>
-  <dd>{{ myAge|date:"d F o" }}</dd>
-</dl>
+  <dl class="dl-horizontal">
+    <dt>My birthday:</dt>
+    <dd>{{ myAge|date:"d F o" }}</dd>
+  </dl>
 
-<dl class="dl-horizontal">
-  <dt>Languages:</dt>
-  <dd>{{ myLanguages }}</dd>
-</dl>
+  <dl class="dl-horizontal">
+    <dt>Languages:</dt>
+    <dd>{{ myLanguages }}</dd>
+  </dl>
 
-<dl class="dl-horizontal">
-  <dt>Skills:</dt>
-  <dd>{{ mySkills }}</dd>
-</dl>
+  <dl class="dl-horizontal">
+    <dt>Skills:</dt>
+    <dd>{{ mySkills }}</dd>
+  </dl>
 
-<dl class="dl-horizontal">
-  <dt>Experience:</dt>
-  <dd>{{ myExperience }}</dd>
-</dl>
+  <dl class="dl-horizontal">
+    <dt>Experience:</dt>
+    <dd>{{ myExperience }}</dd>
+  </dl>
 
-<dl class="dl-horizontal">
-  <dt>Place of work:</dt>
-  <dd>{{ workPlace.0 }} {{ workPlace.1 }} {{ workPlace.2 }}</dd>
-</dl>
+  <dl class="dl-horizontal">
+    <dt>Place of work:</dt>
+    <dd>{{ workPlace.0 }} {{ workPlace.1 }} {{ workPlace.2 }}</dd>
+  </dl>
 
-<dl class="dl-horizontal">
-  <dt>Pets:</dt>
-  <dd>{% if pets %}
-        {% for pet in pets %}
-          {{ pet}}
-        {% endfor %}
-        {% else %}
-          Don't have yeat
-      {% endif %}
+  <dl class="dl-horizontal">
+    <dt>Pets:</dt>
+    <dd>{% if pets %}
+          {% for pet in pets %}
+            {{ pet}}
+          {% endfor %}
+          {% else %}
+            Don't have yeat
+        {% endif %}
 
-  </dd>
-</dl>
+    </dd>
+  </dl>
 
 </div> 
 
@@ -96,15 +70,13 @@
 
 <div class="col-lg-6 col-md-6 col-md-6 col-sm-6 col-xs-6 about-me">
   <img src="/static/img/pic.JPG" alt="It's me" class="img-thumbnail">
+<!--   <br>
+  <div>Today is {{ dayOfWeek }} Friday?</div> -->
 </div>
 
-</div> <!-- container -->
+</div> <!-- end of container -->
+
+{% endblock %}
 
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="/static/js/bootstrap.min.js"></script>
-  </body>
-</html>

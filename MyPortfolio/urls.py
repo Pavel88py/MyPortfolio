@@ -22,4 +22,6 @@ urlpatterns = [
     url(r'^work/$', work),
     url(r'^contact/$', contact),
     url(r'^home2/$', home2),
+    url(r'^base/$', base),
+    url(r'^basetest/$', basetest),
 ]

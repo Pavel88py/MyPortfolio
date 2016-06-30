@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
+
+    <title>{% block title %}Welcome to my portfolio page!{% endblock %}</title>
+
+    {% block css %}
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    {% endblock %}
+
+  </head>
+  <body>
+
+{% block menu %}
+<div class="container">   
+  <div class="row menu">
+
+    <div class="nav nav-pills">
+        <li col-lg-4 col-md-4 col-sm-4 col-xs-4>
+            <a href="..">PORTFOLIO <i class="fa fa-briefcase icon-design" style="font-size:22px;"></i></a>
+        </li>
+        <li col-lg-4 col-md-4 col-sm-4 col-xs-4>
+            <a href="/work">MY WORKS <i class="fa fa-flag-checkered icon-design" style="font-size:22px;"></i></a>
+        </li>
+        <li col-lg-4 col-md-4 col-sm-4 col-xs-4>
+            <a href="/contact">CONTACTS <i class="fa fa-send icon-design" style="font-size:22px;"></i></a>
+        </li>
+    </div> 
+  </div>
+
+<hr>
+{% endblock %}
+
+
+{% block content %}
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 about-me">
+<p> EMPTY PAGE!</p>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+    <hr>
+    <p  id = "footer">This project created by Pavel Silber {{ year }} <i class="fa fa-child icon-design" style="font-size:20px;"></i></p>
+{% endblock %}
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/bootstrap.min.js"></script>
+  </body>
+</html>
