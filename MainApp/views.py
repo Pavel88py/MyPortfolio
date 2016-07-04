@@ -28,6 +28,12 @@ def home(request):
     mySkills = 'HTML / CSS, Javascript / jQuery / AJAX / MySQL / Django  / Python'
     myExperience = 'Build interactive websaits since 2015'
 
+    work_list = [
+                {"header": "My first work place", "desc": ''' "Vichay" '''},
+                {"header": "My second work place", "desc": ''' "Flextronix" '''},
+                {"header": "My Third work place", "desc": ''' "Shafir production" '''},  
+                ]
+
     return render(request, 'index.html', {'myName':myName,
 
      						'myRole': myRole, 
@@ -40,11 +46,7 @@ def home(request):
      						'pets':pets,
      						# 'dayOfWeek':dayOfWeek,
 
-     						})
-
-
-
-
+     						"work_key": work_list})
 
 
 def work(request):

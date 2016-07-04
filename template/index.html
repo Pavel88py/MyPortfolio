@@ -46,10 +46,26 @@
     <dd>{{ myExperience }}</dd>
   </dl>
 
+<!-- ############################################## -->
+
   <dl class="dl-horizontal">
     <dt>Place of work:</dt>
-    <dd>{{ workPlace.0 }} {{ workPlace.1 }} {{ workPlace.2 }}</dd>
+        {% if not work_key %}
+          <p>&nbsp&nbsp&nbsp I didn't work yeat.</p>
+        {% endif %}
+        {% for home in work_key %}
+          <dd>
+            <div class="job">
+              {{ home.header }}
+            </div>
+            <div class="desc">
+              {{ home.desc }}
+            </div>
+          </dd>
+          <br>
+        {% endfor %}
   </dl>
+<!-- ############################################## -->
 
   <dl class="dl-horizontal">
     <dt>Pets:</dt>

@@ -54,4 +54,8 @@ body {
     text-shadow: 1px 1px 2px black, 0 0 1em blue; /* Параметры тени */
     color: white; /* Белый цвет текста */
 /*    font-size: 1.7em; /* Размер надписи */*/
-   }
+}
+
+.job {display: inline-block;}
+
+.desc {display: inline-block;}
