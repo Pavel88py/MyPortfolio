@@ -7,8 +7,6 @@ companyAdress = "795 Folsom Ave \nSuite 600 San Francisco \nCA 94107"
 phoneNumber = '(123) 456-7890'
 email = 'pavel@example.com'
 
-# dayOfWeek = datetime.date.today()
-
 workPlace = ['Google,', 'Apple,', 'Cisco']
 
 pets = ''   # ['Cat,', 'Dog,', 'Elephent']
@@ -24,7 +22,7 @@ def home(request):
     myName = 'pavel silber'
     myRole = 'Django framework web-developer, HTML/CSS page designer, freelancer'
     myAge = date(1988, 8, 17)
-    myLanguages = 'Russian, Hebrew, Eglish'
+    myLanguages = 'russian, hebrew, english'
     mySkills = 'HTML / CSS, Javascript / jQuery / AJAX / MySQL / Django  / Python'
     myExperience = 'Build interactive websaits since 2015'
 
@@ -44,7 +42,6 @@ def home(request):
      						'email':email,
      						'workPlace':workPlace,
      						'pets':pets,
-     						# 'dayOfWeek':dayOfWeek,
 
      						"work_key": work_list})
 
@@ -54,9 +51,6 @@ def work(request):
 
 
 def contact(request):
-
-	# Variables doesn't work here, in home function it does. strange!
-
     return render(request, 'contact.html', {'companyName': companyName, 
     										'companyAdress': companyAdress,
     										'phoneNumber': phoneNumber,
@@ -71,7 +65,7 @@ def home2(request):
 
 
 def base(request):
-    return render(request, 'base.html', {'year': year})
+    return render(request, 'base.html')
 
 
 def basetest(request):
