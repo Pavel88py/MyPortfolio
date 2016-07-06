@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from datetime import datetime, date, time
+from .models import Work
 
 
 companyName = 'Zorozex company'
@@ -26,11 +27,14 @@ def home(request):
     mySkills = 'HTML / CSS, Javascript / jQuery / AJAX / MySQL / Django  / Python'
     myExperience = 'Build interactive websaits since 2015'
 
-    work_list = [
-                {"header": "My first work place", "desc": ''' "Vichay" '''},
-                {"header": "My second work place", "desc": ''' "Flextronix" '''},
-                {"header": "My Third work place", "desc": ''' "Shafir production" '''},  
-                ]
+    # work_list = [
+    #             {"header": "My first work place", "desc": ''' "Vichay" '''},
+    #             {"header": "My second work place", "desc": ''' "Flextronix" '''},
+    #             {"header": "My Third work place", "desc": ''' "Shafir production" '''},  
+    #             ]
+
+    _work_places = Work.objects.all()
+
 
     return render(request, 'index.html', {'myName':myName,
 
@@ -42,8 +46,8 @@ def home(request):
      						'email':email,
      						'workPlace':workPlace,
      						'pets':pets,
-
-     						"work_key": work_list})
+                            "work_places": _work_places},
+                            )
 
 
 def work(request):
