@@ -49,6 +49,29 @@ def home(request):
                             "work_places": _work_places},
                             )
 
+##########################################################################################################
+# <ul>
+#             {%for item in high_education %}
+#             <li>{{item.university}}, {{item.department}} отделение, {{item.faculty}} факультет</li>
+#             {%empty %}
+#                 Отсутствует
+#             {%endfor %}
+#         </ul>
+
+
+# def study(request):
+#     title_page='Обучение'
+#     courses=Course.objects.all()
+
+#     high_education=[{'university':'Казанский Государственный Университет им. В. И. Ульянова-Ленина',
+#                      'department':'дневное',
+#                      'faculty':'биолого-почвенный'}]
+
+
+#     return render(request, 'study.html', {'title_page':title_page,  'high_education': high_education, 'courses':courses})
+
+##########################################################################################################
+
 
 def work(request):
     return render(request, 'work.html')
@@ -61,16 +84,7 @@ def contact(request):
     										'email': email,
     										})
 
-    						
-
-
-def home2(request):
-    return render(request, 'index2.html')
-
-
+    
 def base(request):
     return render(request, 'base.html')
 
-
-def basetest(request):
-    return render(request, 'basetest.html')
