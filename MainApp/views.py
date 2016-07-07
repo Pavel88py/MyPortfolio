@@ -61,16 +61,6 @@ def contact(request):
     										'email': email,
     										})
 
-    						
-
-
-def home2(request):
-    return render(request, 'index2.html')
-
 
 def base(request):
     return render(request, 'base.html')
-
-
-def basetest(request):
-    return render(request, 'basetest.html')
